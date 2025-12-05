@@ -17,7 +17,7 @@ define('OPENDXP_PROJECT_ROOT', dirname(__DIR__));
 
 const PROJECT_ROOT = OPENDXP_PROJECT_ROOT;
 
-// set the used pimcore/symfony environment
+// set the used opendxp/symfony environment
 foreach (['APP_ENV' => 'test', 'OPENDXP_SKIP_DOTENV_FILE' => true] as $name => $value) {
     putenv("{$name}={$value}");
     $_ENV[$name] = $_SERVER[$name] = $value;
