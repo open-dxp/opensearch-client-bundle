@@ -25,13 +25,12 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 final class Configuration implements ConfigurationInterface
 {
-    public const ROOT_NODE = 'opendxp_opensearch_client';
+    public const string ROOT_NODE = 'opendxp_opensearch_client';
 
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder(self::ROOT_NODE);
 
-        /** @var ArrayNodeDefinition $rootNode */
         $rootNode = $treeBuilder->getRootNode();
         $this->addOpenSearchClientConfiguration($rootNode);
 
@@ -40,7 +39,8 @@ final class Configuration implements ConfigurationInterface
 
     private function addOpenSearchClientConfiguration(ArrayNodeDefinition $rootNode): void
     {
-        $rootNode->children()
+        $rootNode
+            ->children()
                 ->arrayNode('clients')
                     ->useAttributeAsKey('name')
                         ->prototype('scalar')
@@ -93,6 +93,7 @@ final class Configuration implements ConfigurationInterface
                             ->scalarNode('aws_secret')
                                ->info('Will set the setSigV4CredentialProvider() key')
                             ->end()
+                        ->end()
                     ->end()
                 ->end()
             ->end();

@@ -20,7 +20,7 @@ It allows to configure one or more Opensearch clients with different configurati
 
 | OpenDXP Client Version | OpenSearch Version |
 |------------------------|--------------------|
-| 1.0.0                  | 1.0.0-2.1.0        |
+| ^1.0                   | 1.0.0 - 2.1.0      |
 
 ## Documentation Overview
 - [Installation](./doc/01_Installation.md)
@@ -37,7 +37,7 @@ Licensed under the GNU General Public License v3.0 (GPLv3). For details, please 
 
 ## Copyright
 © Pimcore GmbH  
-© 2025 OpenDXP Contributors — GPLv3
+© 2026 OpenDXP Contributors — GPLv3
 
 ## Trademarks
 Pimcore® is a registered [trademark](https://www.trademarkelite.com/europe/trademark/trademark-detail/009309841/PIMCORE) of Pimcore GmbH.

@@ -34,18 +34,17 @@ use Symfony\Component\HttpKernel\DependencyInjection\ConfigurableExtension;
  */
 final class OpenDxpOpenSearchClientExtension extends ConfigurableExtension implements PrependExtensionInterface
 {
-    const string CLIENT_SERVICE_PREFIX = 'opendxp.open_search_client.';
+    public const string CLIENT_SERVICE_PREFIX = 'opendxp.open_search_client.';
 
-    const string OPENDXP_CLIENT_PREFIX = 'opendxp.openSearch.custom_client.';
+    public const string OPENDXP_CLIENT_PREFIX = 'opendxp.openSearch.custom_client.';
 
+    #[\Override]
     public function getAlias(): string
     {
         return 'opendxp_opensearch_client';
     }
 
     /**
-     *
-     *
      * @throws Exception
      */
     protected function loadInternal(array $mergedConfig, ContainerBuilder $container): void

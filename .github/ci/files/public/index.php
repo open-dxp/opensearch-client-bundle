@@ -14,14 +14,15 @@ declare(strict_types=1);
  * @license    https://www.gnu.org/licenses/gpl-3.0.html  GNU General Public License version 3 (GPLv3)
  */
 
-namespace OpenDxp\Bundle\OpenSearchClientBundle\Tests\Unit;
+use OpenDxp\Bootstrap;
 
-use Codeception\Test\Unit;
+require_once dirname(__DIR__) . '/vendor/autoload_runtime.php';
 
-class DefaultTest extends Unit
-{
-    public function testDefault(): void
-    {
-        $this->assertTrue(true);
-    }
-}
+Bootstrap::setProjectRoot();
+
+return static function () {
+
+    Bootstrap::bootstrap();
+
+    return Bootstrap::kernel();
+};
