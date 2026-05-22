@@ -4,8 +4,7 @@
     "type": "opendxp-bundle",
     "description": "OpenDXP Opensearch Client",
     "config": {
-        "discard-changes": true,
-        "sort-packages": true,,
+        "sort-packages": true,
         "preferred-install": {
             "open-dxp/opendxp": "source",
             "*": "dist"
@@ -27,11 +26,7 @@
         "symfony/dotenv": "^7.4",
         "symfony/runtime": "^7.4",
         "phpstan/phpstan": "^2.0",
-        "phpstan/phpstan-symfony": "^2.0.14",
-        "phpunit/phpunit": "^10.2.7",
-        "nyholm/psr7": "^1",
-        "symfony/phpunit-bridge": "^6",
-        "fakerphp/faker": "^1.23"
+        "phpstan/phpstan-symfony": "^2.0.14"
     },
     "autoload": {
         "psr-4": {
@@ -46,7 +41,7 @@
     "extra": {
         "opendxp": {
             "bundles": [
-                "OpenDxp\\Bundle\\OpensearchClientBundle\\OpenDxpOpenSearchClientBundle"
+                "OpenDxp\\Bundle\\OpenSearchClientBundle\\OpenDxpOpenSearchClientBundle"
             ]
         }
     }

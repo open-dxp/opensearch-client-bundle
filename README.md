@@ -20,7 +20,7 @@ It allows to configure one or more Opensearch clients with different configurati
 
 | OpenDXP Client Version | OpenSearch Version |
 |------------------------|--------------------|
-| 1.0.0                  | 1.0.0-2.1.0        |
+| ^1.0                   | 1.0.0 - 2.1.0      |
 
 ## Documentation Overview
 - [Installation](./doc/01_Installation.md)
