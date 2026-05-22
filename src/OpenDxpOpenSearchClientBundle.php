@@ -22,6 +22,7 @@ use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 
 class OpenDxpOpenSearchClientBundle extends AbstractOpenDxpBundle
 {
+    #[\Override]
     public function getContainerExtension(): ?ExtensionInterface
     {
         if (null === $this->extension) {
@@ -31,6 +32,7 @@ class OpenDxpOpenSearchClientBundle extends AbstractOpenDxpBundle
         return $this->extension;
     }
 
+    #[\Override]
     public function getPath(): string
     {
         return dirname(__DIR__);

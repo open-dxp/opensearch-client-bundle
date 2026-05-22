@@ -38,6 +38,7 @@ final class OpenDxpOpenSearchClientExtension extends ConfigurableExtension imple
 
     const string OPENDXP_CLIENT_PREFIX = 'opendxp.openSearch.custom_client.';
 
+    #[\Override]
     public function getAlias(): string
     {
         return 'opendxp_opensearch_client';

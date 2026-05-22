@@ -23,10 +23,10 @@ use OpenSearch\Client;
 /**
  * @internal
  */
-final class SearchClient implements OpenSearchClientInterface
+final readonly class SearchClient implements OpenSearchClientInterface
 {
     public function __construct(
-        private readonly Client $client
+        private Client $client
     ) {
     }
 

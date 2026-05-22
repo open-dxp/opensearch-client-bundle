@@ -29,6 +29,7 @@ final class Filter404Handler extends AbstractHandler
 {
     private bool $ignoreNextResponseWarning = false;
 
+    #[\Override]
     public function isHandling(LogRecord $record): bool
     {
         $ignore =

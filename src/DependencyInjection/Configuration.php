@@ -25,7 +25,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
  */
 final class Configuration implements ConfigurationInterface
 {
-    public const ROOT_NODE = 'opendxp_opensearch_client';
+    public const string ROOT_NODE = 'opendxp_opensearch_client';
 
     public function getConfigTreeBuilder(): TreeBuilder
     {
