@@ -31,7 +31,6 @@ final class Configuration implements ConfigurationInterface
     {
         $treeBuilder = new TreeBuilder(self::ROOT_NODE);
 
-        /** @var ArrayNodeDefinition $rootNode */
         $rootNode = $treeBuilder->getRootNode();
         $this->addOpenSearchClientConfiguration($rootNode);
 
@@ -40,7 +39,8 @@ final class Configuration implements ConfigurationInterface
 
     private function addOpenSearchClientConfiguration(ArrayNodeDefinition $rootNode): void
     {
-        $rootNode->children()
+        $rootNode
+            ->children()
                 ->arrayNode('clients')
                     ->useAttributeAsKey('name')
                         ->prototype('scalar')
@@ -93,6 +93,7 @@ final class Configuration implements ConfigurationInterface
                             ->scalarNode('aws_secret')
                                ->info('Will set the setSigV4CredentialProvider() key')
                             ->end()
+                        ->end()
                     ->end()
                 ->end()
             ->end();

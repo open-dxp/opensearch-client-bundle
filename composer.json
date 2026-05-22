@@ -1,56 +1,53 @@
 {
-  "name": "open-dxp/opensearch-client-bundle",
-  "license": "GPL-3.0+",
-  "type": "opendxp-bundle",
-  "description": "OpenDXP Opensearch Client",
-  "config": {
-    "discard-changes": true,
-    "sort-packages": true,
-    "preferred-install": {
-      "open-dxp/opendxp": "source",
-      "*": "dist"
+    "name": "open-dxp/opensearch-client-bundle",
+    "license": "GPL-3.0+",
+    "type": "opendxp-bundle",
+    "description": "OpenDXP Opensearch Client",
+    "config": {
+        "discard-changes": true,
+        "sort-packages": true,,
+        "preferred-install": {
+            "open-dxp/opendxp": "source",
+            "*": "dist"
+        },
+        "allow-plugins": {
+            "symfony/runtime": true,
+            "php-http/discovery": false
+        }
     },
-    "allow-plugins": {
-      "php-http/discovery": false
+    "require": {
+        "php": "~8.3.0 || ~8.4.0 || ~8.5.0",
+        "open-dxp/opendxp": "^1.1",
+        "opensearch-project/opensearch-php": "^2.2.0"
+    },
+    "conflict": {
+        "opensearch-project/opensearch-php": ">=2.4"
+    },
+    "require-dev": {
+        "symfony/dotenv": "^7.4",
+        "symfony/runtime": "^7.4",
+        "phpstan/phpstan": "^2.0",
+        "phpstan/phpstan-symfony": "^2.0.14",
+        "phpunit/phpunit": "^10.2.7",
+        "nyholm/psr7": "^1",
+        "symfony/phpunit-bridge": "^6",
+        "fakerphp/faker": "^1.23"
+    },
+    "autoload": {
+        "psr-4": {
+            "OpenDxp\\Bundle\\OpenSearchClientBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "kernel/Kernel.php"
+        ]
+    },
+    "extra": {
+        "opendxp": {
+            "bundles": [
+                "OpenDxp\\Bundle\\OpensearchClientBundle\\OpenDxpOpenSearchClientBundle"
+            ]
+        }
     }
-  },
-  "prefer-stable": true,
-  "minimum-stability": "dev",
-  "require": {
-    "php": "~8.3.0 || ~8.4.0 || ~8.5.0",
-    "open-dxp/opendxp": "^1.1",
-    "opensearch-project/opensearch-php": "^2.2.0"
-  },
-  "conflict": {
-    "opensearch-project/opensearch-php": ">=2.4"
-  },
-  "require-dev": {
-    "codeception/codeception": "^4.1.12 || ^5.0.10",
-    "codeception/phpunit-wrapper": "^9",
-    "codeception/module-asserts": "^2",
-    "codeception/module-symfony": "^1.6.0 || ^3.1.1",
-    "phpstan/phpstan": "^2.0",
-    "phpstan/phpstan-symfony": "^2.0",
-    "phpunit/phpunit": "^9.3 || 10.2.7",
-    "nyholm/psr7": "^1",
-    "symfony/phpunit-bridge": "^6",
-    "fakerphp/faker": "^1.23"
-  },
-  "autoload": {
-    "psr-4": {
-      "OpenDxp\\Bundle\\OpenSearchClientBundle\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "OpenDxp\\Bundle\\OpenSearchClientBundle\\Tests\\": "tests"
-    }
-  },
-  "extra": {
-    "opendxp": {
-      "bundles": [
-        "OpenDxp\\Bundle\\OpensearchClientBundle\\OpenDxpOpenSearchClientBundle"
-      ]
-    }
-  }
 }

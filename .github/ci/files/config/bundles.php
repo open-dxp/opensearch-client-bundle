@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'OpenDxp\\Bundle\\OpensearchClientBundle\\OpenDxpOpensearchClientBundle' => ['all' => true],
+    OpenDxp\Bundle\OpensearchClientBundle\OpenDxpOpensearchClientBundle::class => ['all' => true],
 ];
