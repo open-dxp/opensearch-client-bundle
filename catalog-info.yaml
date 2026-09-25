@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+    name: opensearch-client-bundle
+    description: Opensearch Client bundle
+spec:
+    type: library
+    lifecycle: production
+    owner: team-opendxp
+    system: opendxp
