@@ -25,9 +25,8 @@ use OpenSearch\Client;
  */
 final readonly class SearchClient implements OpenSearchClientInterface
 {
-    public function __construct(
-        private Client $client
-    ) {
+    public function __construct(private Client $client)
+    {
     }
 
     public function getOriginalClient(): Client
