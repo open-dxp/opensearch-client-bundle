@@ -21,7 +21,6 @@ Thumbs.db
 # PhpStorm / IDEA
 .idea
 
-
 # Test env
 /bin
 /cache
@@ -37,13 +36,18 @@ package-lock.json
 .php_cs.cache
 .php-cs-fixer.cache
 
-# codeception
-/codeception.yaml
-/tests/_output/
-/tests/Support/_generated/
-
-
 /.env
 /.htaccess
 /auth.json
 /config.json
+
+######################
+# Tests              #
+######################
+# only the *.dist configuration is staged
+/phpunit.xml
+/.phpunit.cache/
+
+# agent instructions stay local
+/CLAUDE.md
+/.claude/
