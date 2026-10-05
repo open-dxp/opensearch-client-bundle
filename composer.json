@@ -24,7 +24,7 @@
         "opensearch-project/opensearch-php": ">=2.4"
     },
     "require-dev": {
-        "open-dxp/test-foundation": "1.x-dev",
+        "open-dxp/test-foundation": "^1.0",
         "phpstan/phpstan": "^2.0",
         "phpstan/phpstan-symfony": "^2.0.14",
         "symfony/dotenv": "^7.4",
