@@ -20,9 +20,6 @@
         "open-dxp/opendxp": "^1.5",
         "opensearch-project/opensearch-php": "^2.2.0"
     },
-    "conflict": {
-        "opensearch-project/opensearch-php": ">=2.4"
-    },
     "require-dev": {
         "open-dxp/test-foundation": "^1.0",
         "phpstan/phpstan": "^2.0",

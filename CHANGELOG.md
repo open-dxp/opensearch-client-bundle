@@ -3,6 +3,7 @@
 ## 1.1.0
 - [CHORE] Replace Codeception with Pest and `open-dxp/test-foundation`
 - [CHORE] Require `open-dxp/opendxp` ^1.5
+- [CHORE] Remove opensearch-php 2.4 conflict
 
 ## 1.0.1
 - [CHORE] Update branding names [#1](https://github.com/open-dxp/opensearch-client-bundle/pull/1)
